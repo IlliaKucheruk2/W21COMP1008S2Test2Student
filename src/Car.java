@@ -11,6 +11,9 @@ public class Car {
     private double price;
 
     public Car(String make, String model, int mileage, double price) {
+        setMake(make);
+        setModel(model);
+        setPrice(price);
     }
 
     public String getMake() {
