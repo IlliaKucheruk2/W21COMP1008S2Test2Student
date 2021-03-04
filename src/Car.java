@@ -99,6 +99,6 @@ public class Car {
 
     public String toString()
     {
-        return "";
+        return String.format("%1s %2s, with %3s km - asking $%4s", make, model, mileage,price);
     }
 }
