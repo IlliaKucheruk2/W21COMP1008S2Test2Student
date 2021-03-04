@@ -1,3 +1,4 @@
+import java.lang.reflect.Array;
 import java.util.Arrays;
 import java.util.List;
 
@@ -32,7 +33,19 @@ public class Car {
         return price;
     }
 
+    public static List<String> getName(){
+        return Arrays.asList("Ford", "Honda", "Porsche");
+    }
+
     public void setMake(String make) {
+        List<String> validMake = getName();
+        if(validMake.contains(make)){
+            this.make = make;
+        }
+        else {
+            throw new IllegalArgumentException("Error. You can use " + validMake);
+        }
+
     }
 
     public void setModel(String model) {
