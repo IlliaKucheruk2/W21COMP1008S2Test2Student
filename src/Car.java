@@ -90,6 +90,11 @@ public class Car {
     }
 
     public void setPrice(double price) {
+        if(price >=0 && price <=2000000){
+            this.price = price;
+        }
+        else
+            throw new IllegalArgumentException("Its not a valid price. Price should be in the range of 0 to 2,000,000");
     }
 
     public String toString()
