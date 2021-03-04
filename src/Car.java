@@ -14,6 +14,7 @@ public class Car {
     public Car(String make, String model, int mileage, double price) {
         setMake(make);
         setModel(model);
+        setMileage(mileage);
         setPrice(price);
     }
 
@@ -81,6 +82,11 @@ public class Car {
     }
 
     public void setMileage(int mileage) {
+        if(mileage >=0 && mileage <=5000000){
+            this.mileage = mileage;
+        }
+        else
+            throw new IllegalArgumentException("Its not a valid mileage. Mileage should be in the range of 0 to 5,000,000");
     }
 
     public void setPrice(double price) {
