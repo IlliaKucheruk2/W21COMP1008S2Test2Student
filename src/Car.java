@@ -49,6 +49,35 @@ public class Car {
     }
 
     public void setModel(String model) {
+        String[] ford = new String[] { "F150", "Escort", "Explorer"};
+        List<String> fordList = Arrays.asList(ford);
+        String[] honda = new String[] {"Accord","Civic","Pilot"};
+        List<String> hondaList = Arrays.asList(honda);
+        String[]  porsche = new String[] {"911", "Cayman", "718 Boxster"};
+        List<String> porscheList = Arrays.asList(porsche);
+
+        if(make.equals("Ford")){
+            if(fordList.contains(model)){
+                this.model = model;
+            }
+            else
+                throw new IllegalArgumentException("Its not a valid model");
+        }
+        else if (make.equals("Honda")){
+            if(hondaList.contains(model)){
+                this.model = model;
+            }
+            else
+                throw new IllegalArgumentException("Its not a valid model");
+        }
+        else if (make.equals("Porsche")){
+            if(porscheList.contains(model)){
+                this.model = model;
+            }
+            else
+                throw new IllegalArgumentException("Its not a valid model");
+        }
+
     }
 
     public void setMileage(int mileage) {
